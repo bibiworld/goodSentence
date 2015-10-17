@@ -1,0 +1,1 @@
+在goodSentence.py中定义函数getSentence()，返回一个元组(sentence,meaning)，coding:unicode
