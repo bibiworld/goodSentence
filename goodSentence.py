@@ -13,7 +13,7 @@ def getSentence():
 	urldata = urllib2.urlopen(theurl).read()
 	pattern2 = re.compile(r'<font color="#800080">(.*?)</font>')
 	pattern3 = re.compile(r'</b></div><div><b>(.*?)</b>')
-	return pattern2.search(urldata).group(1),pattern3.search(urldata).group(1)
+	return pattern2.search(urldata).group(1).decode("gbk"),pattern3.search(urldata).group(1).decode("gbk")
 	
 if __name__ == "__main__":
-	print getSentence()
+	print getSentence()[0] + "\n" + getSentence()[1]
